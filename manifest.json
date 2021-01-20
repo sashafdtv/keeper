@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Хранитель",
+  "version": "0.6.2",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "description": "Виджет для хранения тикетов в чате с клиентами. Ngrok код можно запросить у Алексея Луканова.",
+  "content_scripts": [{
+    "matches": [
+      "*://customers.amocrm.ru/customers/detail/*",
+      "*://customers.amocrm.ru/leads/detail/*",
+      "*://customers.amocrm.ru/leads/pipeline/*",
+      "*://customers.amocrm.ru/_support/*/detail/*",
+      "*://customers.amocrm.ru/*/_support/*/detail/*"
+    ],
+    "js": ["js/jquery.js", "js/content.js"],
+    "css": ["css/style.css"]
+  }],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "template/template.html"
+  ]
+}
